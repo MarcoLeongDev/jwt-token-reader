@@ -43,40 +43,48 @@
       display: inline-block;
       vertical-align: top;
     }
+
+
+    /* Containers */
+#content { float: left; }
+#aSide { float: right; }
+
+/* Page structures */
+.twoColumns #content { width: 48%; }
+.twoColumns #aSide { width: 48%; }
+
+.oneColumn #content { width: 100%; }
   </style>
 </head>
 
 <body>
   <form class="w3-container w3-card-4 w3-light-grey">
-    <h2>Token Reader</h2>
-    <p id="app">
-      <!-- <div id='left'>
-        <label>Id token</label>
-        <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="idTokenEncoded">
-        <textarea name="text"
-          onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ idTokenDecoded }}</textarea>
-    </div>
-    
-    <div id='right'>
-      <label>Access token</label>
-      <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="accessTokenEncoded">
-      <textarea name="text"
-        onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ accessTokenDecoded }}</textarea>
-    </div>
-       -->
+    <h2>JWT Token Reader</h2>
+    <div id="app" class="twoColumns">
 
+      <div id="aSide">
       <label>Id token</label>
       <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="idTokenEncoded">
       <textarea name="text"
         onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ idTokenDecoded }}</textarea>
-      </br>
+      </div>
+
+
+      
+
+      <div id="content">
       <label>Access token</label>
       <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="accessTokenEncoded">
       <textarea name="text"
         onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ accessTokenDecoded }}</textarea>
+      </div>
 
+      
+    </div>
 
-    <footer>
+    <div class="oneColumn">
+      <div id="content">
+        <footer>
       <center>Created 2021 by Marco Leong
         (<a href="https://paypal.me/marcoleong/">buy me a ☕️</a>)
         </br>
@@ -86,9 +94,18 @@
         <img alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
       </center>
-    </footer>
-    </p>
+      </footer>
+    </div>
+  </div>
   </form>
+
+
+  
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+<script>
+w3CodeColor();
+</script>
 </body>
 
 </html>
