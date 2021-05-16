@@ -46,14 +46,26 @@
 
 
     /* Containers */
-#content { float: left; }
-#aSide { float: right; }
+    #content {
+      float: left;
+    }
 
-/* Page structures */
-.twoColumns #content { width: 48%; }
-.twoColumns #aSide { width: 48%; }
+    #aSide {
+      float: right;
+    }
 
-.oneColumn #content { width: 100%; }
+    /* Page structures */
+    .twoColumns #content {
+      width: 48%;
+    }
+
+    .twoColumns #aSide {
+      width: 48%;
+    }
+
+    .oneColumn #content {
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -63,49 +75,49 @@
     <div id="app" class="twoColumns">
 
       <div id="aSide">
-      <label>Id token</label>
-      <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="idTokenEncoded">
-      <textarea name="text"
-        onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ idTokenDecoded }}</textarea>
+        <label>Id token</label>
+        <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="idTokenEncoded">
+        <textarea name="text"
+          onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ idTokenDecoded }}</textarea>
       </div>
 
 
-      
+
 
       <div id="content">
-      <label>Access token</label>
-      <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="accessTokenEncoded">
-      <textarea name="text"
-        onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ accessTokenDecoded }}</textarea>
+        <label>Access token</label>
+        <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="accessTokenEncoded">
+        <textarea name="text"
+          onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ accessTokenDecoded }}</textarea>
       </div>
 
-      
+
     </div>
 
     <div class="oneColumn">
       <div id="content">
         <footer>
-      <center>Created 2021 by Marco Leong
-        (<a href="https://paypal.me/marcoleong/">buy me a ☕️</a>)
-        </br>
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"></a><br />This work is
-        licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
-          Attribution 4.0 International License</a>.</br>
-        <img alt="Creative Commons License" style="border-width:0"
-          src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-      </center>
-      </footer>
+          <center>Created 2021 by Marco Leong
+            (<a href="https://paypal.me/marcoleong/">buy me a ☕️</a>)
+            </br>
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"></a><br />This work is
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+              Attribution 4.0 International License</a>.</br>
+            <img alt="Creative Commons License" style="border-width:0"
+              src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+          </center>
+        </footer>
+      </div>
     </div>
-  </div>
   </form>
 
 
-  
-<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
-<script>
-w3CodeColor();
-</script>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+
+  <script>
+    w3CodeColor();
+  </script>
 </body>
 
 </html>
