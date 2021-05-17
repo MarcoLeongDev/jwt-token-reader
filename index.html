@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
   <title>JWT Token Reader</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
   <script src="https://unpkg.com/vue"></script>
   <script src="script.js"></script>
   <style>
@@ -70,7 +71,34 @@
 <body>
   <form class="w3-container w3-card-4 w3-light-grey">
     <h2>JWT Token Reader</h2>
-    <div id="app" class="twoColumns">
+
+    <div id="tokenView" class="twoColumns" v-if="visible">
+
+      <div id="aSide">
+        <label>Id token</label>
+        <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="idTokenEncoded">
+        <textarea name="text"
+          onclick='this.style.height = "";this.style.height = this.scrollHeight + "px"'>{{ idTokenDecoded }}</textarea>
+      </div>
+
+
+
+
+      <div id="content">
+        <label>Access token</label>
+        <input class="w3-input w3-border w3-round-large" name="last" type="text" v-model="accessTokenEncoded" @keydown="updateToken">
+
+        <div class="w3-panel w3-card w3-light-grey">
+          <h3>Example</h3>
+          <div class="w3-code notranslate ">
+            {{ accessTokenDecoded }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="app" class="twoColumns" v-if="visible">
 
       <div id="aSide">
         <label>Id token</label>
@@ -113,10 +141,15 @@
 
   <script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
 
-  <script>
-    w3CodeColor();
-  </script>
+  <div class="w3-panel w3-card w3-light-grey"> 
+    <h4>JavaScript Example</h4>
+    <div class="w3-code jsHigh notranslate">
+      fruits[0] = "Banana";<br>
+      fruits[1] = "Apple";<br>
+      fruits[2] = "Mango";<br>
+      fruits[3] = "Plum";<br>
+    </div>
+  </div>
 </body>
 
 </html>
-

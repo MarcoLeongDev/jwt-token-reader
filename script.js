@@ -1,7 +1,32 @@
 window.onload = function () {
+  var token =  new Vue({
+    el: '#tokenView',
+    data: {
+      visible: true,
+      idTokenEncoded: 'token',
+      idTokenDecoded: 'token',
+      accessTokenEncoded: '{ hello = "world"}',
+      accessTokenDecoded: "output"
+    },
+    mounted: function(){
+      console.log("a new beginning");
+      
+    },
+    methods: {
+      updateToken: function(){
+        this.accessTokenDecoded = this.accessTokenEncoded;
+        console.log("he");
+      }
+    }
+  })
+
+  w3CodeColor();
+  
+
   var app = new Vue({
     el: '#app',
     data: {
+      visible: false,
       message: '1',
       idTokenEncoded: '',
       idTokenDecoded: '',
@@ -66,6 +91,8 @@ window.onload = function () {
       }
     }
   })
+
+  
 }
 
 const parseJwt = (token) => {
