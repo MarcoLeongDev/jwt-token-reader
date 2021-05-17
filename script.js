@@ -2,7 +2,7 @@ window.onload = function () {
   var token =  new Vue({
     el: '#tokenView',
     data: {
-      visible: true,
+      visible: false,
       idTokenEncoded: 'token',
       idTokenDecoded: 'token',
       accessTokenEncoded: '{ hello = "world"}',
@@ -26,7 +26,7 @@ window.onload = function () {
   var app = new Vue({
     el: '#app',
     data: {
-      visible: false,
+      visible: true,
       message: '1',
       idTokenEncoded: '',
       idTokenDecoded: '',
